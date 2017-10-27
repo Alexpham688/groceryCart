@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> JSCart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <h1>Shopping Cart</h1>
+      <div id="cart-container">
+        <i id="open-cart" class="glyphicon glyphicon-shopping-cart"></i>
+        <button type="button" id="empty-cart">Empty Cart</button>
+      </div>
+      <span id="item-count"></span>
+    </header>
+    <div id="container">
+      <!--form-->
+      <form  class="form-horizontal">
+        <span>
+          <span class="input-group search">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+          <input id="search"class="form-control" placeholder='search'>
+          <button type="submit" class="btn btn-inverse" value="+ add"><i class="glyphicon glyphicon-remove glyphicon-white"></i></button>
+          <!--nav-->
+          <nav>
+            <li><a href="#">ALL</a></li>
+            <li><a href="#">FRUITS</a></li>
+            <li><a href="#">VEGGIES</a></li>
+            <li><a href="#">OTHERS</a></li>
+          </nav>
+        </span>
+      </form>
+
+      <!--shopping cart-->
+      <div id="shopping-cart">
+        <div id="cart-item-container">
+          <h2>Groceries in cart</h2>
+          <i id="close-cart" class="glyphicon glyphicon-remove-circle"></i>
+          <div id="cart-items"></div>
+          <span id='cart-tax'></span>
+          <span id='cart-total'></span>
+        </div>
+      </div>
+      <!--item container-->
+      <div id="item-container" class='col-sm-10'>
+        <!--item 1-->
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/apple.jpg" alt="red apple">
+            </div>
+            <div class="item-text">
+              <h5>Apple</h5>
+              <p class="price-container">Price: $<span class='price'>1.25</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+        <!--item 2-->
+        <div id="item" class="col-sm-4 veggies" >
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/bokchoy.jpg" alt="bok choy">
+            </div>
+            <div class="item-text">
+              <h5>Bok Choy</h5>
+              <p class="price-container">Price: $<span class='price'>4.19</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 veggies">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/carrots.jpg" alt="carrots">
+            </div>
+            <div class="item-text">
+              <h5>Carrots</h5>
+              <p class="price-container">Price: $<span class='price'>2.75</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/kiwi.jpg" alt="kiwi">
+            </div>
+            <div class="item-text">
+              <h5>Kiwi</h5>
+              <p class="price-container">Price: $<span class='price'>1.25</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/avocado.jpg" alt="avocado">
+            </div>
+            <div class="item-text">
+              <h5>Avocado</h5>
+              <p class="price-container">Price: $<span class='price'>5.99</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 veggies">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/broccolli.jpg" alt="broccoli">
+            </div>
+            <div class="item-text">
+              <h5>Broccoli</h5>
+              <p class="price-container">Price: $<span class='price'>3.25</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 others">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/doritos.jpg" alt="doritos">
+            </div>
+            <div class="item-text">
+              <h5>Doritos</h5>
+              <p class="price-container">Price: $<span class='price'>3.99</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 others">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/cinnabon.jpg" alt="cinnabon">
+            </div>
+            <div class="item-text">
+              <h5>Cinnabon</h5>
+              <p class="price-container">Price: $<span class='price'>3.79</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 veggies">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/potato.jpg" alt="potato">
+            </div>
+            <div class="item-text">
+              <h5>Potato</h5>
+              <p class="price-container">Price: $<span class='price'>4.10</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/strawberry.jpg" alt="red strawberry">
+            </div>
+            <div class="item-text">
+              <h5>Strawberry</h5>
+              <p class="price-container">Price: $<span class='price'>6.25</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/welches.jpg" alt="welches">
+            </div>
+            <div class="item-text">
+              <h5>Welches</h5>
+              <p class="price-container">Price: $<span class='price'>2.80</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 veggies">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/peas.png" alt="peas">
+            </div>
+            <div class="item-text">
+              <h5>Peas</h5>
+              <p class="price-container">Price: $<span class='price'>3.99</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/pineapple.jpg" alt="pineapple">
+            </div>
+            <div class="item-text">
+              <h5>Pineapple</h5>
+              <p class="price-container">Price: $<span class='price'>6.15</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/tomato.jpg" alt="tomato">
+            </div>
+            <div class="item-text">
+              <h5>Tomato</h5>
+              <p class="price-container">Price: $<span class='price'>4.15</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/red_grapes.jpg" alt="red grapes">
+            </div>
+            <div class="item-text">
+              <h5>Red Grapes</h5>
+              <p class="price-container">Price: $<span class='price'>4.99</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 fruits">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/watermelon.jpg" alt="watermelon">
+            </div>
+            <div class="item-text">
+              <h5>Watermelon</h5>
+              <p class="price-container">Price: $<span class='price'>6.99</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 others">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/tropicana.jpg" alt="tropicana juice">
+            </div>
+            <div class="item-text">
+              <h5>Tropicana</h5>
+              <p class="price-container">Price: $<span class='price'>6.00</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 veggies">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/yellow_pepper.jpg" alt="yellow pepper">
+            </div>
+            <div class="item-text">
+              <h5>Yellow Pepper</h5>
+              <p class="price-container">Price: $<span class='price'>3.45</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 veggies">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/celery.jpg" alt="celery">
+            </div>
+            <div class="item-text">
+              <h5>Celery</h5>
+              <p class="price-container">Price: $<span class='price'>2.99</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 others">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/raisins.jpg" alt="raisins">
+            </div>
+            <div class="item-text">
+              <h5>Raisins</h5>
+              <p class="price-container">Price: $<span class='price'>4.25</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+
+        <div id="item" class="col-sm-4 veggies">
+          <div id="item-details">
+            <div class="item-image">
+              <img src="img/zucchini.jpg" alt="zucchini">
+            </div>
+            <div class="item-text">
+              <h5>Zucchini</h5>
+              <p class="price-container">Price: $<span class='price'>5.15</span></p>
+              <p></p>
+            </div>
+          </div>
+          <button class='add'type="button">Add to cart</button>
+        </div>
+        <!--item-container-->
+      </div>
+
+      <!--container-->
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
